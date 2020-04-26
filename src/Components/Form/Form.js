@@ -19,7 +19,13 @@ const Form = ({ name, number, handleChange, handleSubmit }) => {
           value={number}
           onChange={handleChange}
         ></input>
-        <button className="addContact-btn" type="submit">Add contact</button>
+        <button
+          className="addContact-btn"
+          disabled={!name.length || !number.length}
+          type="submit"
+        >
+          Add contact
+        </button>
       </form>
     </div>
   );
